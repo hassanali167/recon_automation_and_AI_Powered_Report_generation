@@ -1,0 +1,173 @@
+Absolutely! Here's your complete **documentation file** (`how_to_use.txt`) that explains **everything step-by-step** — from setup to execution — for your AI-powered offensive recon automation tool.
+
+---
+
+### 📄 `how_to_use.txt`
+
+> Place this in the root of your project folder as a user guide.
+
+````
+==============================
+🧠 AI Powered Reconnaissance Automation Tool
+==============================
+
+This tool automates recon using CLI tools and AI to generate both a detailed text report and a structured PDF report. It uses GROQ LLaMA-3 AI to convert raw recon data into a professional red-team report format.
+
+----------------------------------------------
+📦 FILES & COMPONENTS OVERVIEW
+----------------------------------------------
+
+1. install_recon_tools.sh
+   🔧 Installs all required CLI tools like whois, nmap, dnsrecon, wpscan, etc.
+
+2. recon_automate.sh
+   🔍 Runs all recon tools on a given domain and creates a report: 
+   → `output/<domain>_report.txt`
+
+3. report_gen.py
+   🧠 Uses GROQ AI API to generate a structured PDF report from the text report.
+   → Output: `<domain>_report.pdf`
+
+4. run_shell.py
+   🛠️ Orchestrator script. Runs installation, then recon, then report generation.
+
+5. gradio_app.py
+   🌐 Frontend interface using Gradio — takes inputs, runs the pipeline, shows log, and gives downloads.
+
+6. .env
+   🔐 Contains your GROQ API keys (comma-separated)
+
+7. output/
+   📁 Stores `.txt` reports
+
+----------------------------------------------
+🛠️ SETUP INSTRUCTIONS
+----------------------------------------------
+
+1. ✅ Clone/download the tool folder
+2. ✅ Open a terminal in the root project folder
+
+3. ✅ Create and activate virtual environment (optional but recommended):
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+````
+
+4. ✅ Install required Python packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. ✅ Add your GROQ API keys in `.env` file:
+
+   ```
+   GROQ_KEYS=your_key1,your_key2,your_key3
+   ```
+
+6. ✅ Make the shell scripts executable:
+
+   ```bash
+   chmod +x install_recon_tools.sh
+   chmod +x recon_automate.sh
+   ```
+
+7. ✅ Create output folder if not already present:
+
+   ```bash
+   mkdir -p output
+   ```
+
+---
+
+## 🚀 USAGE OPTIONS
+
+1. ▶️ CLI MODE (Manual)
+
+---
+
+Run the orchestrator manually via terminal:
+
+```bash
+python3 run_shell.py <target_domain> <sudo_password>
+```
+
+🔸 Example:
+
+```bash
+python3 run_shell.py paf-iast.edu.pk mysecurepass
+```
+
+* Installs tools
+* Performs recon
+* Creates:
+
+  * `output/paf-iast.edu.pk_report.txt`
+  * `paf-iast.edu.pk_report.pdf`
+
+---
+
+2. 🌐 GRADIO WEB INTERFACE
+
+---
+
+Start the interface:
+
+```bash
+python3 gradio_app.py
+```
+
+Access it at:
+
+```
+http://127.0.0.1:7860
+```
+
+Inputs:
+
+* 🔍 Domain or IP (e.g., paf-iast.edu.pk)
+* 🔐 Sudo Password (masked)
+
+Press **"🚀 Run Recon + Generate PDF"**
+
+Outputs:
+
+* Execution log
+* 📄 Download TXT Report
+* 📑 Download PDF Report (AI generated)
+
+---
+
+## 🔍 REPORT LOCATIONS
+
+* Raw Recon Text Report:
+  → `output/<domain>_report.txt`
+
+* AI Enhanced PDF Report:
+  → `<domain>_report.pdf`
+
+---
+
+## ⚠️ NOTES & WARNINGS
+
+* This tool uses `sudo`, so your password is required for tool installation.
+* AI-generated content may contain outdated or inaccurate data.
+* CLI tools require internet — make sure networking is enabled.
+* Only run this in trusted environments — sudo access is sensitive.
+
+---
+
+## 📞 SUPPORT / AUTHORS
+
+Team: Offensive Security Automation (FYP)
+Lead: Hassan Ali
+Co-Developer: Syed Aleem Gillani
+Powered by: GPT + LLaMA + GROQ API
+
+```
+
+---
+
+Would you like this converted into a PDF `UserGuide.pdf` as well?  
+I can also generate this as a Markdown (`README.md`) if you're publishing on GitHub.
+```
