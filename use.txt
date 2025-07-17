@@ -102,8 +102,8 @@ python3 run_shell.py paf-iast.edu.pk mysecurepass
 * Performs recon
 * Creates:
 
-  * `output/paf-iast.edu.pk_report.txt`
-  * `paf-iast.edu.pk_report.pdf`
+  * `output/abc.txt`
+  * `abc_report.pdf`
 
 ---
 
@@ -125,7 +125,7 @@ http://127.0.0.1:7860
 
 Inputs:
 
-* 🔍 Domain or IP (e.g., paf-iast.edu.pk)
+* 🔍 Domain or IP (e.g., abc)
 * 🔐 Sudo Password (masked)
 
 Press **"🚀 Run Recon + Generate PDF"**
