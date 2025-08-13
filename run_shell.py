@@ -2,6 +2,7 @@ import os
 import sys
 import subprocess
 
+
 def run_with_sudo(script_path, sudo_password, extra_args=None):
     cmd = ["sudo", "-S", "bash", script_path]
     if extra_args:
