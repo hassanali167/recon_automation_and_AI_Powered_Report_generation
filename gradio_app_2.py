@@ -5,7 +5,6 @@ import subprocess
 TOOL_NAME = "AI Powered Reconnaissance Automation and Report Generation Tool"
 WARNING = "⚠️ This tool integrates AI & CLI utilities. Results may contain outdated, previous or incorrect records. Always cross-verify manually."
 
-
 def run_recon(domain, sudo_password):
     if not domain.strip() or not sudo_password.strip():
         return "❌ Domain or password missing.", None, None, gr.update(visible=False), gr.update(visible=False)
