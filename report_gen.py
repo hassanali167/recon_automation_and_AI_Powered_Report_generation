@@ -9,7 +9,6 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
-
 # === Load API Keys from .env ===
 load_dotenv()
 API_KEYS = os.getenv("GROQ_KEYS", "").split(",")
