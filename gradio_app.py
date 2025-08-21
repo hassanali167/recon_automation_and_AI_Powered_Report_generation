@@ -3,7 +3,6 @@ import gradio as gr
 import subprocess
 import shutil
 
-
 # === Tool Metadata ===
 TOOL_NAME = "AI Powered Reconnaissance Automation and Report Generation Tool"
 WARNING = "⚠️ This tool integrates AI & CLI utilities. Results may contain outdated, previous or incorrect records. Always cross-verify manually."
